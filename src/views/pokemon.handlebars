@@ -1,0 +1,61 @@
+<div class='container'>
+  <nav
+    style="--bs-breadcrumb-divider: '>'; margin-top: 1rem;"
+    aria-label='breadcrumb'
+    class="section active"
+  >
+    <ol class='breadcrumb'>
+      <li class='breadcrumb-item' aria-current='page'><a href="/">Home</a></li>
+      <li class='breadcrumb-item active' aria-current='page'>{{name}}</li>
+    </ol>
+  </nav>
+  <div class='card_pokemon section active'>
+
+    <img src={{img_url}} alt='Pokemon' />
+
+    <div class='text_pokemon'>
+      <h2 class='nome'>{{name}}</h2>
+      <br />
+
+      <table>
+
+        <tr>
+          <td>
+            <div>
+              <b>Types: </b>
+              {{types}}.
+            </div>
+          </td>
+          <td>
+            <div>
+              <b>Skills: </b>
+              {{#each abilities}}
+                {{this.ability.name}}
+              {{/each}}
+              .
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+
+        </tr>
+
+        <tr>
+          <td><div><b>Weight: </b>{{weight}}</div></td>
+          <td><div><b>Height: </b>{{height}}</div></td>
+        </tr>
+
+        <tr>
+          {{#each currencies}}
+            {{#if @first}}
+              <td><div><b>Currencie name: </b>{{this.name}}</div></td>
+              <td><div><b>Currencie symbol: </b>{{this.symbol}}</div></td>
+            {{/if}}
+          {{/each}}
+        </tr>
+
+      </table>
+    </div>
+  </div>
+</div>

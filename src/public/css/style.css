@@ -1,0 +1,104 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+}
+.container {
+  margin-top: 100px;
+  position: relative;
+  width: 1200px;
+}
+
+header {
+  position: fixed;
+  z-index: 2000;
+  width: 100%;
+  top: 0;
+}
+.section {
+  opacity: 0;
+}
+.section.active {
+  animation: slide 0.3s forwards;
+}
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translate(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+footer {
+  width: 100%;
+  padding-block: 40px;
+}
+#card-index {
+  transition: 0.4s;
+}
+#card-index:hover {
+  transform: translateX(-200px);
+}
+.hidden-card {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nome {
+  font-weight: bold;
+}
+
+.card_pokemon img {
+  width: 30%;
+  max-width: 30%;
+  margin-left: 50px;
+  padding: 20px;
+}
+
+.card_pokemon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.text_pokemon {
+  margin-left: 50px;
+}
+
+.marginBreadCrumb {
+  padding-left: 70px;
+}
+
+table {
+  width: 550px;
+}
+a {
+  color: #ed1b24;
+}
+.notfound {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#search-input {
+  transition: 0.4s;
+}
+#search-input:hover,
+#search-input:active,
+#search-input:focus {
+  transform: scale(1.05);
+}

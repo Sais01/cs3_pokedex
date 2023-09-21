@@ -1,0 +1,28 @@
+
+
+<div class="container">
+    
+    <nav style="--bs-breadcrumb-divider: '>'; margin-top: 1rem;" aria-label="breadcrumb" class="section active">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+    </nav>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 pb-5" id="rowCards"> 
+        {{#each data}}
+        <div class="col mb-4 section" style="margin-top: 1rem;" id="card-index">
+            <a style="display:block" href="/pokemon/{{name}}">
+                <div class="card text-center">
+                    <img src="{{img_url}}" style="height: 165px;" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{name}}</h5>
+                        <p class="card-text">
+                            {{type}}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+</div>
